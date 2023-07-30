@@ -1,19 +1,14 @@
 # Lib
-
 A library of common TypeScript functions.
-
-### Supported markets
-For now, **MarCal** only supports the New York Stock Exchange (NYSE) calendar for the years 2023 and 2024.
-
 
 ### Install
 ```bash
-npm i @baloian/lib
+npm install github:baloian/lib
 ```
 
-### Usage
+### Import
 ```typescript
-TODO
+import { sleep } from '@baloian/lib';
 ```
 
 ### Methods
