@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "allowJs": true,
+    "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "lib": ["ES2022"],
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

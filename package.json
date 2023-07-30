@@ -1,0 +1,33 @@
+{
+  "name": "@baloian/lib",
+  "version": "0.0.1",
+  "description": "A library of common TypeScript functions",
+  "author": "Artiom Baloian <artiom.baloian@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baloian/lib.git"
+  },
+  "dependencies": {
+    "decimal.js": "^10.2.0",
+    "moment-timezone": "^0.5.43"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "typescript": "^5.1.3"
+  }
+}
