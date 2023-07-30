@@ -23,7 +23,7 @@ round(value: number, decimals: number = 2): number
 timeDiff(start: number, end: number = 0, tz: string = 'America/New_York'): string
 
 // 4.
-pctChange(current: number, previous: number): number
+pctDiff(current: number, previous: number): number
 ```
 
 

@@ -8,7 +8,7 @@ import { round } from './numbers';
 //
 // Returns percentage change of price or 0 if one of arguments is zero or a
 // negative value, which makes the percent change meaningless.
-export function pctChange(current: number, previous: number): number {
+export function pctDiff(current: number, previous: number): number {
   // A value of zero or a negative value makes the percent change meaningless.
   if (previous <= 0 || current <= 0) return 0;
   // Percentage Change Formula:
