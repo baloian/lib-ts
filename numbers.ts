@@ -1,4 +1,4 @@
-import Decimal from 'decimal.js/decimal.mjs';
+import { Decimal } from 'decimal.js';
 
 
 // The most common solutions for rounding to a decimal place is to either use
