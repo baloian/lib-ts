@@ -9,7 +9,7 @@ import cryptoNode from 'crypto';
 */
 export function shuffle(array: any[]) {
   for (let i = array.length - 1; i > 0; i--) {
-      const j = cryptoNode.randomInt(0, i + 1);
-      [array[i], array[j]] = [array[j], array[i]];
+    const j = cryptoNode.randomInt(0, i + 1);
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
