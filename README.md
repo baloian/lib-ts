@@ -24,6 +24,9 @@ timeDiff(start: number, end: number = 0, tz: string = 'America/New_York'): strin
 
 // 4.
 pctDiff(current: number, previous: number): number
+
+// 5. Calculate what percentage VALUE is of TOTAL.
+pctOf(value: number, total: number): number
 ```
 
 
