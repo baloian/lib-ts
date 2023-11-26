@@ -16,3 +16,11 @@ export function pctDiff(current: number, previous: number): number {
   const pctChange: number = ((current - previous) / Math.abs(previous)) * 100;
   return round(pctChange);
 }
+
+
+// Calculate what percentage X is of Y. Formula: Percentage = (X / Y) × 100
+export function pctOf(value: number, total: number): number {
+  if (value <= 0 || total <= 0) return 0;
+  const rv: number = (value / total) * 100;
+  return round(rv);
+}
