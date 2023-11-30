@@ -6,9 +6,12 @@ A library of common TypeScript functions.
 npm install github:baloian/lib
 ```
 
-## Import
+## Usage
 ```typescript
-import { sleep } from '@baloian/lib';
+import { pctDiff } from '@baloian/lib';
+
+const diff: number = pctDiff(100, 50);
+console.log(diff);
 ```
 
 ## Functions
