@@ -30,6 +30,14 @@ pctDiff(current: number, previous: number): number
 
 // 5. Calculate what percentage VALUE is of TOTAL.
 pctOf(value: number, total: number): number
+
+/*
+* Fisher-Yates shuffle algorithm, Durstenfeld's variant as described in
+* https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+*
+* This function shuffles the given array in-place.
+*/
+shuffle(array: any[]): void
 ```
 
 
