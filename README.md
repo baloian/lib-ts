@@ -16,19 +16,19 @@ console.log(diff);
 
 ## Functions
 ```typescript
-// 1. Function makes the program sleep for a given number of milliseconds.
+// Function makes the program sleep for a given number of milliseconds.
 sleep(ms: number): Promise<any>
 
-// 2. Rounding number to a decimal place
+// Rounding number to a decimal place
 round(value: number, decimals: number = 2): number
 
-// 3. Get time difference in human readable form.
+// Get time difference in human readable form.
 timeDiff(start: number, end: number = 0, tz: string = 'America/New_York'): string
 
-// 4. calculates percentage change of two values (current and previous).
+// Calculates percentage change of two values (current and previous).
 pctDiff(current: number, previous: number): number
 
-// 5. Calculate what percentage VALUE is of TOTAL.
+// Calculate what percentage VALUE is of TOTAL.
 pctOf(value: number, total: number): number
 
 /*
