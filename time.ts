@@ -1,5 +1,7 @@
 import moment from 'moment-timezone';
 
+
+// Get time difference in human readable form.
 export function timeDiff(start: number, end: number = 0, tz: string = 'America/New_York'): string {
   if (!end) end = Number(moment().tz(tz).format('x'));
   const seconds = Math.floor((end - start) / 1000);
