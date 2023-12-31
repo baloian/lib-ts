@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "decimal.js": "^10.4.3",
-    "moment-timezone": "^0.5.43"
+    "moment-timezone": "^0.5.43",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
