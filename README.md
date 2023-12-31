@@ -16,7 +16,7 @@ console.log(diff);
 
 ## Functions
 ```typescript
-// 1.
+// 1. Function makes the program sleep for a given number of milliseconds.
 sleep(ms: number): Promise<any>
 
 // 2. Rounding number to a decimal place
