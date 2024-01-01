@@ -28,7 +28,7 @@ timeDiff(start: number, end: number = 0, tz: string = 'America/New_York'): strin
 // Calculates percentage change of two values (current and previous).
 pctDiff(current: number, previous: number): number
 
-// Calculate what percentage VALUE is of TOTAL.
+// Calculates what percentage VALUE is of TOTAL.
 pctOf(value: number, total: number): number
 
 /*
@@ -37,7 +37,13 @@ pctOf(value: number, total: number): number
 *
 * This function shuffles the given array in-place.
 */
-shuffle(array: any[]): void
+shuffle<T>(array: T[]): void
+
+/*
+* Returns random element (list[i]) of list such that 0 <= i < list.length.
+* The random implementation avoids modulo bias.
+*/
+getRandomElemOfList<T>(data: T[]): T | undefined
 ```
 
 
