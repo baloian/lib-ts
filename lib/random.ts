@@ -15,9 +15,9 @@ export function shuffle<T>(array: T[]) {
 }
 
 
-// Return random element (list[i]) of list such that 0 <= i < list.length.
+// Returns random element (array[i]) of array such that 0 <= i < array.length.
 // The random implementation avoids modulo bias.
-export function getRandomElemOfList<T>(data: T[]): T | undefined {
+export function getRandomElemOfArray<T>(data: T[]): T | undefined {
   if (data.length > 0) return data[cryptoNode.randomInt(0, data.length)];
   return undefined;
 }

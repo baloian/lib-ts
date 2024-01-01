@@ -40,10 +40,10 @@ pctOf(value: number, total: number): number
 shuffle<T>(array: T[]): void
 
 /*
-* Returns random element (list[i]) of list such that 0 <= i < list.length.
+* Returns random element (array[i]) of array such that 0 <= i < array.length
 * The random implementation avoids modulo bias.
 */
-getRandomElemOfList<T>(data: T[]): T | undefined
+getRandomElemOfArray<T>(data: T[]): T | undefined
 ```
 
 
