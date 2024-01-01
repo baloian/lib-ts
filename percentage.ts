@@ -1,4 +1,4 @@
-import { round } from './numbers'; 
+import { round } from './lib/numbers'; 
 
 // Function calculates percentage change of two values (current and previous).
 //

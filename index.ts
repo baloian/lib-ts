@@ -1,6 +1,6 @@
-export { sleep } from './sleep';
-export { timeDiff } from './time';
+export { sleep } from './lib/sleep';
+export { timeDiff } from './lib/time';
 export { pctDiff, pctOf } from './percentage';
-export { round, autoFixedDecimal } from './numbers';
-export { abort } from './abort';
-export { shuffle } from './random';
+export { round, autoFixedDecimal } from './lib/numbers';
+export { abort } from './lib/abort';
+export { shuffle } from './lib/random';
