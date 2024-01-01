@@ -1,4 +1,4 @@
-# Lib
+# TypeScript Library
 A library of common TypeScript functions.
 
 ## Install
