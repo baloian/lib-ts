@@ -44,6 +44,9 @@ shuffle<T>(array: T[]): void
 * The random implementation avoids modulo bias.
 */
 getRandomElemOfArray<T>(data: T[]): T | undefined
+
+// Returns the sum of the property value in the array of objects.
+sumOfPropVal(list: unknown[], prop: string): number
 ```
 
 
