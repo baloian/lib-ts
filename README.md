@@ -31,6 +31,9 @@ pctDiff(current: number, previous: number): number
 // Calculates what percentage VALUE is of TOTAL.
 pctOf(value: number, total: number): number
 
+// Returns the sum of the property value in the array of objects.
+sumOfPropVal(list: unknown[], prop: string): number
+
 /*
 * Fisher-Yates shuffle algorithm, Durstenfeld's variant as described in
 * https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
@@ -44,9 +47,6 @@ shuffle<T>(array: T[]): void
 * The random implementation avoids modulo bias.
 */
 getRandomElemOfArray<T>(data: T[]): T | undefined
-
-// Returns the sum of the property value in the array of objects.
-sumOfPropVal(list: unknown[], prop: string): number
 ```
 
 
