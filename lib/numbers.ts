@@ -1,6 +1,3 @@
-import { Decimal } from 'decimal.js';
-
-
 // The most common solutions for rounding to a decimal place is to either use
 // Number.prototype.toFixed(), or multiply the float by some power of 10 in order
 // to leverage Math.round(). Both of these work, except sometimes a decimal of 5

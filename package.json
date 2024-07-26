@@ -19,7 +19,6 @@
     "url": "https://github.com/baloian/lib.git"
   },
   "dependencies": {
-    "decimal.js": "^10.4.3",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
