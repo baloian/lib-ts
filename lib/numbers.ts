@@ -13,13 +13,11 @@ import { Decimal } from 'decimal.js';
 //
 // For example, Number(Math.round(1.005+'e2')+'e-2'); // 1.01
 export function round(value: number, decimals: number = 2): number {
-  // Check if the value is in notation format then use the Decimal library.
-  const tmpStr: string = String(value);
-  if (tmpStr.includes('e')) {
-    const decNum = new Decimal(value);
-    return Number(decNum.toFixed(decimals));
-  }
-  return Number(Math.round(Number(`${value}e${decimals}`)) + `e-${decimals}`);
+  // Convert the value to exponential notation to handle precision correctly
+  const expStr = `${value}e${decimals}`;
+  const roundedExpStr = Math.round(Number(expStr));
+  const finalValueStr = `${roundedExpStr}e-${decimals}`;
+  return Number(finalValueStr);
 }
 
 
