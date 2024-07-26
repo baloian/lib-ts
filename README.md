@@ -23,7 +23,7 @@ sleep(ms: number): Promise<any>
 round(value: number, decimals: number = 2): number
 
 // Get time difference in human readable form.
-timeDiff(start: number, end: number = 0, tz: string = 'America/New_York'): string
+timeDiff(start: number, end: number, rounded: boolean = false): string
 
 // Calculates percentage change of two values (current and previous).
 pctDiff(current: number, previous: number): number
