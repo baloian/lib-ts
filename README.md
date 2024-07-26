@@ -53,6 +53,9 @@ getRandomElemOfArray<T>(data: T[]): T | undefined
  * For example, formatToUSD(123459.87) -> $123,458.87
  */
 formatToUSD(amount: number): string
+
+// Copy object
+deepCopy<T>(obj: T): T
 ```
 
 
