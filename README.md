@@ -47,6 +47,12 @@ shuffle<T>(array: T[]): void
 * The random implementation avoids modulo bias.
 */
 getRandomElemOfArray<T>(data: T[]): T | undefined
+
+/*
+ * Convert a number to a USD dollar value.
+ * For example, formatToUSD(123459.87) -> $123,458.87
+ */
+formatToUSD(amount: number): string
 ```
 
 
