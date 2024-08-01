@@ -1,5 +1,5 @@
 # TypeScript Library
-A library of common TypeScript functions.
+A library of common native TypeScript functions.
 
 ## Install
 ```bash
