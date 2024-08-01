@@ -9,7 +9,7 @@ import {
 
 const runner = new TestRunner();
 
-runner.addTestCase('Testing sumOfPropVal() function', () => {
+runner.addTestCase('sumOfPropVal()', () => {
   let list: unknown[] = [{a: 5}, {a: 4}];
   Test.expect(sumOfPropVal(list, 'a')).toBe(9);
 
@@ -21,7 +21,7 @@ runner.addTestCase('Testing sumOfPropVal() function', () => {
 });
 
 
-runner.addTestCase('Testing pctOf() function', () => {
+runner.addTestCase('pctOf()', () => {
   let value: number = 50;
   let total: number = 100;
   Test.expect(pctOf(value, total)).toBe(50);
@@ -36,7 +36,7 @@ runner.addTestCase('Testing pctOf() function', () => {
 });
 
 
-runner.addTestCase('Testing pctDiff() function', () => {
+runner.addTestCase('pctDiff()', () => {
   let current: number = 100;
   let previous: number = 50;
   Test.expect(pctDiff(current, previous)).toBe(100);
@@ -51,7 +51,7 @@ runner.addTestCase('Testing pctDiff() function', () => {
 });
 
 
-runner.addTestCase('Testing timeDiff() function', () => {
+runner.addTestCase('timeDiff()', () => {
   let start: number = 1702394102296;
   let end: number = 1702404570878;
   Test.expect(timeDiff(start, end, true)).toBe('2 hours');
