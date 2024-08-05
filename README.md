@@ -70,7 +70,14 @@ clear(): void;
 updateFront(data: T): void;
 getList(): T[];
 ```
+Example
+```typescript
+import { Queue, QueueType } from '@baloian/lib';
 
+const q = new Queue<number>();
+q.push(5);
+console.log(q.front());
+```
 
 ## Contributions
 Contributions are welcome and can be made by submitting GitHub pull requests
