@@ -1,5 +1,5 @@
 # TypeScript Library
-A library of common native TypeScript functions.
+A library of common native TypeScript functions and data structures.
 
 ## Install
 ```bash
@@ -56,6 +56,19 @@ formatToUSD(amount: number): string
 
 // Copy object
 deepCopy<T>(obj: T): T
+```
+
+## Data Structures
+#### Queue
+```typescript
+push(item: T): void;
+pop(): void;
+front(): T | undefined;
+isEmpty(): boolean;
+size(): number;
+clear(): void;
+updateFront(data: T): void;
+getList(): T[];
 ```
 
 
