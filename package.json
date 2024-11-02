@@ -1,6 +1,6 @@
 {
   "name": "@baloian/lib",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A library of common TypeScript functions",
   "author": "Artiom Baloian <artiom.baloian@gmail.com>",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/node": "^20.14.12",
-    "typescript": "^5.5.4"
+    "@types/node": "^22.8.6",
+    "typescript": "^5.6.3"
   }
 }
