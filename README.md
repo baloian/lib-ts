@@ -1,5 +1,5 @@
 # TypeScript Library
-A library of common native TypeScript functions and data structures.
+A library of native TypeScript functions and data structures with no external dependencies.
 
 ## Install
 ```bash
