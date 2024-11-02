@@ -27,3 +27,23 @@ export function timeDiff(start: number, end: number, rounded: boolean = false): 
   }
   return difference.trim() || '0 seconds';
 }
+
+
+// Convert a number (representing a month) to a month name.
+export function numberToMonth(monthNumber: number): string | null {
+  const monthNames: string[] = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+  return monthNumber >= 1 && monthNumber <= 12 ? monthNames[monthNumber - 1] : null;
+}

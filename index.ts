@@ -1,5 +1,5 @@
 export { sleep } from './lib/sleep';
-export { timeDiff } from './lib/time';
+export { timeDiff, numberToMonth } from './lib/time';
 export { pctDiff, pctOf } from './lib/percentage';
 export { round, autoFixedDecimal, formatToUSD } from './lib/numbers';
 export { abort } from './lib/abort';
