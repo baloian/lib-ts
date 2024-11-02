@@ -56,6 +56,9 @@ formatToUSD(amount: number): string
 
 // Copy object
 deepCopy<T>(obj: T): T
+
+// Convert a number (representing a month) to a month name.
+function numberToMonth(monthNumber: number): string | null
 ```
 
 ## Data Structures
