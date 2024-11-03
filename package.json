@@ -12,7 +12,7 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "prepare": "npm run build",
-    "test": "npm run build && NODE_ENV=${NODE_ENV-development} node dist/tests/run.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
