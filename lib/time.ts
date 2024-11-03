@@ -31,6 +31,7 @@ export function timeDiff(start: number, end: number, rounded: boolean = false): 
 
 // Convert a number (representing a month) to a month name.
 export function numberToMonth(monthNumber: number): string | null {
+  if (!Number.isInteger(monthNumber)) return null;
   const monthNames: string[] = [
     'January',
     'February',
