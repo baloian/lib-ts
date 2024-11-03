@@ -1,4 +1,8 @@
-import { round } from '../lib/numbers';
+import {
+  formatToUSD,
+  round
+} from '../lib/numbers';
+
 
 describe('round', () => {
   it('should round to 2 decimal places by default', () => {
@@ -40,5 +44,64 @@ describe('round', () => {
 
   it('should round 1.005 to 1.01 when rounding to 2 decimal places', () => {
     expect(round(1.005)).toBe(1.01);
+  });
+});
+
+
+describe('formatToUSD', () => {
+  test('formats positive numbers', () => {
+    expect(formatToUSD(1234.56)).toBe('$1,234.56');
+  });
+
+  test('formats negative numbers', () => {
+    expect(formatToUSD(-1234.56)).toBe('-$1,234.56');
+  });
+
+  test('formats zero', () => {
+    expect(formatToUSD(0)).toBe('$0.00');
+  });
+
+  test('formats numbers with no cents as two decimal places', () => {
+    expect(formatToUSD(1000)).toBe('$1,000.00');
+  });
+
+  test('rounds numbers to two decimal places', () => {
+    expect(formatToUSD(1234.567)).toBe('$1,234.57');
+  });
+
+  test('handles large numbers', () => {
+    expect(formatToUSD(1234567890.12)).toBe('$1,234,567,890.12');
+  });
+
+  test('formats small numbers', () => {
+    expect(formatToUSD(0.5)).toBe('$0.50');
+  });
+
+  test('formats numbers with high precision', () => {
+    expect(formatToUSD(0.1234)).toBe('$0.12');
+  });
+
+  test('returns empty string for a string input', () => {
+    expect(formatToUSD("1234" as any)).toBe('');
+  });
+
+  test('returns empty string for a boolean input', () => {
+    expect(formatToUSD(true as any)).toBe('');
+  });
+
+  test('returns empty string for an object input', () => {
+    expect(formatToUSD({} as any)).toBe('');
+  });
+
+  test('returns empty string for an array input', () => {
+    expect(formatToUSD([1234] as any)).toBe('');
+  });
+
+  test('returns empty string for undefined', () => {
+    expect(formatToUSD(undefined as any)).toBe('');
+  });
+
+  test('returns empty string for NaN', () => {
+    expect(formatToUSD(NaN)).toBe('');
   });
 });

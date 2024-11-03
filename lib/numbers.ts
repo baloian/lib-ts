@@ -29,6 +29,7 @@ export function autoFixedDecimal(value: number): number {
 // Convert a number to a USD dollar value. For example,
 // formatToUSD(123459.87) -> $123,458.87
 export function formatToUSD(amount: number): string {
+  if (typeof amount !== 'number' || isNaN(amount)) return '';
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
