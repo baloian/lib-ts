@@ -3,12 +3,12 @@ A library of native TypeScript functions and data structures with no external de
 
 ## Install
 ```bash
-npm install github:baloian/lib
+npm install github:baloian/lib-ts
 ```
 
 ## Usage
 ```typescript
-import { pctDiff } from '@baloian/lib';
+import { pctDiff } from '@baloian/lib-ts';
 
 const diff: number = pctDiff(100, 50);
 console.log(diff);
