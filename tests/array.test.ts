@@ -30,7 +30,7 @@ describe('sumOfPropVal', () => {
       { value: 'not a number' },
       { value: 20 }
     ];
-    expect(sumOfPropVal(list, 'value')).toBe(10);
+    expect(sumOfPropVal(list, 'value')).toBe(30);
   });
 
   test('handles nested objects', () => {
@@ -39,7 +39,7 @@ describe('sumOfPropVal', () => {
       { details: { value: 20 } },
       { details: { value: 30 } }
     ];
-    expect(sumOfPropVal(list, 'details')).toBe(0); // Should return 0 since `details` is not the expected prop directly
+    expect(sumOfPropVal(list, 'details')).toBe(0);
   });
 
   test('returns 0 for objects with null or undefined values', () => {
