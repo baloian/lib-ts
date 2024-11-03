@@ -5,12 +5,8 @@ import { round } from './numbers';
 // Arguments:
 // - current: Current price of coin.
 // - previous: Previous (basically it is price 24 hours ago) price of coin.
-//
-// Returns percentage change of price or 0 if one of arguments is zero or a
-// negative value, which makes the percent change meaningless.
 export function pctDiff(current: number, previous: number): number {
-  // A value of zero or a negative value makes the percent change meaningless.
-  if (previous <= 0 || current <= 0) return 0;
+  if (previous === 0) throw new Error('Previous value cannot be zero.');
   // Percentage Change Formula:
   // ((current_price - prev_price) / |prev_price|) x 100
   const pctChange: number = ((current - previous) / Math.abs(previous)) * 100;
@@ -20,7 +16,7 @@ export function pctDiff(current: number, previous: number): number {
 
 // Calculate what percentage X is of Y. Formula: Percentage = (X / Y) × 100
 export function pctOf(value: number, total: number): number {
-  if (value <= 0 || total <= 0) return 0;
+  if (total === 0) throw new Error('Total cannot be zero.');
   const rv: number = (value / total) * 100;
   return round(rv);
 }
