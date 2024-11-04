@@ -39,7 +39,7 @@ export class Queue<T> implements QueueType<T> {
   }
 
   updateFront(data: T): void {
-    this.items[0] = JSON.parse(JSON.stringify(data));
+    if (this.items.length > 0) this.items[0] = JSON.parse(JSON.stringify(data));
   }
 
   getList(): T[] {
