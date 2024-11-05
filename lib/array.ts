@@ -1,10 +1,12 @@
-// This function returns the sum of the property value in the array of objects.
+/**
+ * Returns the sum of numeric values for a specified property across an array of objects
+ */
 export function sumOfPropVal(list: unknown[], prop: string): number {
-  let total: number = 0;
-  list.forEach((e: unknown, idx: number) => {
-    if (e && typeof e === 'object') {
-      if (e[prop] !== undefined && e[prop] !== null && typeof e[prop] === 'number') total += e[prop];
+  return list.reduce((total: number, item: unknown) => {
+    if (item && typeof item === 'object') {
+      const value = item[prop];
+      if (typeof value === 'number') return total + value;
     }
-  });
-  return total;
+    return total;
+  }, 0);
 }
