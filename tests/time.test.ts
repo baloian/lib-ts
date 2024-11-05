@@ -1,4 +1,94 @@
-import { numberToMonth } from '../lib/time';
+import { numberToMonth, timeDiff } from '../lib/time';
+
+
+describe('timeDiff', () => {
+  // Helper function to create timestamps
+  const createTimestamp = (days = 0, hours = 0, minutes = 0, seconds = 0) => {
+    return new Date(2024, 0, 1, hours, minutes, seconds).getTime() + (days * 24 * 60 * 60 * 1000);
+  };
+
+  describe('non-rounded output', () => {
+    it('handle zero difference', () => {
+      const start = createTimestamp();
+      expect(timeDiff(start, start)).toBe('0 seconds');
+    });
+
+    it('format seconds correctly', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(0, 0, 0, 45);
+      expect(timeDiff(start, end)).toBe('45 seconds');
+    });
+
+    it('format minutes and seconds correctly', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(0, 0, 2, 30);
+      expect(timeDiff(start, end)).toBe('2 minutes 30 seconds');
+    });
+
+    it('format hours, minutes, and seconds correctly', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(0, 2, 15, 30);
+      expect(timeDiff(start, end)).toBe('2 hours 15 minutes 30 seconds');
+    });
+
+    it('format days, hours, minutes, and seconds correctly', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(3, 2, 15, 30);
+      expect(timeDiff(start, end)).toBe('3 days 2 hours 15 minutes 30 seconds');
+    });
+
+    it('handle singular units correctly', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(1, 1, 1, 1);
+      expect(timeDiff(start, end)).toBe('1 day 1 hour 1 minute 1 second');
+    });
+  });
+
+  describe('rounded output', () => {
+    it('round to days', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(3, 12, 30, 45);
+      expect(timeDiff(start, end, true)).toBe('3 days');
+    });
+
+    it('round to hours when less than a day', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(0, 5, 30, 45);
+      expect(timeDiff(start, end, true)).toBe('5 hours');
+    });
+
+    it('round to minutes when less than an hour', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(0, 0, 30, 45);
+      expect(timeDiff(start, end, true)).toBe('30 minutes');
+    });
+
+    it('round to seconds when less than a minute', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(0, 0, 0, 45);
+      expect(timeDiff(start, end, true)).toBe('45 seconds');
+    });
+
+    it('handle zero difference when rounded', () => {
+      const start = createTimestamp();
+      expect(timeDiff(start, start, true)).toBe('0 seconds');
+    });
+  });
+
+  describe('edge cases', () => {
+    it('handle negative time differences', () => {
+      const start = createTimestamp(1);
+      const end = createTimestamp(0);
+      expect(timeDiff(start, end)).toBe('1 day');
+    });
+
+    it('handle very large time differences', () => {
+      const start = createTimestamp();
+      const end = createTimestamp(999, 23, 59, 59);
+      expect(timeDiff(start, end)).toBe('999 days 23 hours 59 minutes 59 seconds');
+    });
+  });
+});
 
 
 describe('numberToMonth', () => {

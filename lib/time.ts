@@ -5,7 +5,10 @@ export function timeDiff(start: number, end: number, rounded: boolean = false): 
   const MS_PER_HOUR = MS_PER_MINUTE * 60;
   const MS_PER_DAY = MS_PER_HOUR * 24;
 
-  const diffMilliseconds = end - start;
+  let diffMilliseconds = end - start;
+  // Handle negative time differences by using absolute value
+  diffMilliseconds = Math.abs(diffMilliseconds);
+
   const diffDays = Math.floor(diffMilliseconds / MS_PER_DAY);
   const diffHours = Math.floor((diffMilliseconds % MS_PER_DAY) / MS_PER_HOUR);
   const diffMinutes = Math.floor((diffMilliseconds % MS_PER_HOUR) / MS_PER_MINUTE);
