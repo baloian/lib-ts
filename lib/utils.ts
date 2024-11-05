@@ -2,9 +2,5 @@
 // functions or special types like Date, Set, Map,...
 export function deepCopy<T>(obj: T): T {
   if (!obj) return obj;
-  try {
-    return JSON.parse(JSON.stringify(obj));
-  } catch (error) {
-    throw new Error('Cannot deep copy non-serializable values');
-  }
+  return JSON.parse(JSON.stringify(obj));
 }
