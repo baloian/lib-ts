@@ -6,4 +6,3 @@ export { abort } from './lib/abort';
 export { shuffle, getRandomElemOfArray } from './lib/random';
 export { sumOfPropVal } from './lib/array';
 export { deepCopy } from './lib/utils';
-export { Queue, QueueType } from './lib/data-structure/queue';
