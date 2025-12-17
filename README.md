@@ -1,5 +1,5 @@
 # TypeScript Library
-A library of native TypeScript functions and data structures with no external dependencies.
+A library of native TypeScript functions without external dependencies.
 
 ## Install
 ```bash
@@ -53,13 +53,6 @@ formatToUSD(amount: number): string
 
 // Copy object
 deepCopy<T>(obj: T): T
-```
-
-## Example
-```typescript
-import { formatToUSD } from '@baloian/lib-ts';
-
-console.log(formatToUSD(123459.87));
 ```
 
 ## Contributions
