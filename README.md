@@ -28,9 +28,6 @@ pctDiff(current: number, previous: number): number
 // Calculates what percentage VALUE is of TOTAL.
 pctOf(value: number, total: number): number
 
-// Returns the sum of the property value in the array of objects.
-sumOfPropVal(list: unknown[], prop: string): number
-
 /*
 * Fisher-Yates shuffle algorithm, Durstenfeld's variant as described in
 * https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
@@ -38,21 +35,6 @@ sumOfPropVal(list: unknown[], prop: string): number
 * This function shuffles the given array in-place.
 */
 shuffle<T>(array: T[]): void
-
-/*
-* Returns random element (array[i]) of array such that 0 <= i < array.length
-* The random implementation avoids modulo bias.
-*/
-getRandomElemOfArray<T>(data: T[]): T | undefined
-
-/*
- * Convert a number to a USD dollar value.
- * For example, formatToUSD(123459.87) -> $123,458.87
- */
-formatToUSD(amount: number): string
-
-// Copy object
-deepCopy<T>(obj: T): T
 ```
 
 ## Contributions
